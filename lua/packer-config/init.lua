@@ -24,4 +24,10 @@ return require('packer').startup(function()
 
     -- Top Bar
     use 'romgrk/barbar.nvim'
+    
+    -- Tree sitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
 end)

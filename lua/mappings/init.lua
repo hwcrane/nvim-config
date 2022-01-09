@@ -1,8 +1,9 @@
+local tree = require'nvim-tree-config.tree'
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = ' '
 
-map('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+map('n', '<leader>e', ':NvimTreeToggle<CR>' , opts)
 -- Move to previous/next
 map('n', '<A-,>', ':BufferPrevious<CR>', opts)
 map('n', '<A-.>', ':BufferNext<CR>', opts)
@@ -34,4 +35,5 @@ map('n', '<C-p>', ':BufferPick<CR>', opts)
 map('n', '<Space>bb', ':BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', ':BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
+
 
