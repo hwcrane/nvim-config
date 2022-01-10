@@ -12,7 +12,6 @@ set.errorbells = false
 set.exrc = true
 set.swapfile = false
 set.backup = false
-set.undodir = "~/.vim/undodir"
 set.undofile = true
 set.incsearch = true
 set.scrolloff = 8
