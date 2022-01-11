@@ -41,3 +41,14 @@ map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
 map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 map('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
+
+-- Dissable arrow keys
+map('n', '<up>', '<nop>', opts)
+map('n', '<down>', '<nop>', opts)
+map('n', '<left>', '<nop>', opts)
+map('n', '<right>', '<nop>', opts)
+
+map('i', '<up>', '<nop>', opts)
+map('i', '<down>', '<nop>', opts)
+map('i', '<left>', '<nop>', opts)
+map('i', '<right>', '<nop>', opts)
