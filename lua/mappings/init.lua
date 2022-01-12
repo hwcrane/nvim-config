@@ -52,3 +52,9 @@ map('i', '<up>', '<nop>', opts)
 map('i', '<down>', '<nop>', opts)
 map('i', '<left>', '<nop>', opts)
 map('i', '<right>', '<nop>', opts)
+
+-- Clear Search Highlighting
+map('n', '<esc>', ':noh<CR>', opts)
+
+-- Toggle trouble
+map('n', '<leader>t', ':TroubleToggle<CR>', opts)

@@ -24,7 +24,7 @@ return require('packer').startup(function()
 
     -- Top Bar
     use 'romgrk/barbar.nvim'
-    
+
     -- Tree sitter
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -40,4 +40,8 @@ return require('packer').startup(function()
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+
+    -- Trouble
+    use "folke/trouble.nvim"
+
 end)
