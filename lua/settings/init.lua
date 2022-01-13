@@ -22,4 +22,3 @@ set.termguicolors = true
 set.splitbelow = true
 set.wrap = false
 set.splitright = true
-vim.o.mouse = 'a'
