@@ -3,6 +3,8 @@ return require("packer").startup(function()
 
 	-- Colour Scheme
 	use("EdenEast/nightfox.nvim")
+	use("NTBBloodbath/doom-one.nvim")
+	use("olimorris/onedarkpro.nvim")
 
 	-- File tree
 	use("kyazdani42/nvim-tree.lua")

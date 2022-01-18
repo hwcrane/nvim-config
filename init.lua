@@ -1,5 +1,7 @@
 require("settings")
-require("colourschemes-config.nightfox")
+-- require("colourschemes-config.nightfox")
+require("colourschemes-config.doom-one")
+-- require("colourschemes-config.one-dark-pro")
 require("packer-config")
 require("nvim-tree-config")
 require("mappings")
