@@ -7,22 +7,23 @@ map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Buffers
 
 -- Move to previous/next
-map("n", "≤", ":BufferPrevious<CR>", opts) -- Option + ,
-map("n", "≥", ":BufferNext<CR>", opts) -- Option + .
+map("n", "<A-,>", ":BufferPrevious<CR>", opts) -- Option + ,
+map("n", "<A-.>", ":BufferNext<CR>", opts) -- Option + .
 -- Goto buffer in position...
-map("n", "¡", ":BufferGoto 1<CR>", opts) -- Option + 1
-map("n", "€", ":BufferGoto 2<CR>", opts) -- Option + 2
-map("n", "#", ":BufferGoto 3<CR>", opts) -- Option + 3
-map("n", "¢", ":BufferGoto 4<CR>", opts) -- Option + 4
-map("n", "∞", ":BufferGoto 5<CR>", opts) -- Option + 5
-map("n", "§", ":BufferGoto 6<CR>", opts) -- Option + 6
-map("n", "¶", ":BufferGoto 7<CR>", opts) -- Option + 7
-map("n", "•", ":BufferGoto 8<CR>", opts) -- Option + 8
-map("n", "ª", ":BufferGoto 9<CR>", opts) -- Option + 9
-map("n", "º", ":BufferLast<CR>", opts) -- Option + 0
+map("n", "<A-1>", ":BufferGoto 1<CR>", opts) -- Option + 1
+map("n", "<A-2>", ":BufferGoto 2<CR>", opts) -- Option + 2
+map("n", "<A-3>", ":BufferGoto 3<CR>", opts) -- Option + 3
+map("n", "<A-4>", ":BufferGoto 4<CR>", opts) -- Option + 4
+map("n", "<A-5>", ":BufferGoto 5<CR>", opts) -- Option + 5
+map("n", "<A-6>", ":BufferGoto 6<CR>", opts) -- Option + 6
+map("n", "<A-7>", ":BufferGoto 7<CR>", opts) -- Option + 7
+map("n", "<A-8>", ":BufferGoto 8<CR>", opts) -- Option + 8
+map("n", "<A-9>", ":BufferGoto 9<CR>", opts) -- Option + 9
+map("n", "<A-0>", ":BufferLast<CR>", opts) -- Option + 0
+
 -- Close buffer
-map("n", "ç", ":BufferClose<CR>", opts)
--- Wipeout buffer
+-- map("n", "<A-C>", ":BufferClose<CR>", opts)
+-- Wipeout bu7fer
 --                 :BufferWipeout<CR>
 -- Close commands
 --                 :BufferCloseAllButCurrent<CR>
@@ -32,9 +33,9 @@ map("n", "ç", ":BufferClose<CR>", opts)
 map("n", "<C-p>", ":BufferPick<CR>", opts)
 
 -- Sort automatically by...
-map("n", "<Space>bb", ":BufferOrderByBufferNumber<CR>", opts)
-map("n", "<Space>bd", ":BufferOrderByDirectory<CR>", opts)
-map("n", "<Space>bl", ":BufferOrderByLanguage<CR>", opts)
+map("n", "<leader>bb", ":BufferOrderByBufferNumber<CR>", opts)
+map("n", "<leader>bd", ":BufferOrderByDirectory<CR>", opts)
+map("n", "<leader>bl", ":BufferOrderByLanguage<CR>", opts)
 
 -- Telescope
 map("n", "<leader>ff", ":Telescope find_files<CR>", opts)
@@ -58,3 +59,9 @@ map("n", "<esc>", ":noh<CR>", opts)
 
 -- Toggle trouble
 map("n", "<leader>t", ":TroubleToggle<CR>", opts)
+
+-- Splits
+map("n", "<leader>j", "<C-W><C-J>", opts)
+map("n", "<leader>k", "<C-W><C-K>", opts)
+map("n", "<leader>l", "<C-W><C-L>", opts)
+map("n", "<leader>h", "<C-W><C-H>", opts)
