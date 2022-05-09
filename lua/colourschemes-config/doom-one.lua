@@ -1,6 +1,6 @@
 require("doom-one").setup({
 	cursor_coloring = false,
-	terminal_colors = false,
+	terminal_colors = true,
 	italic_comments = true,
 	enable_treesitter = true,
 	transparent_background = false,

@@ -1,12 +1,46 @@
-local nightfox = require("nightfox")
+-- local nightfox = require("nightfox")
 
-nightfox.setup({
-	fox = "nordfox", -- change the colorscheme
-	styles = {
-		comments = "italic",
-		functions = "bold",
-	},
+-- nightfox.setup({
+-- 	fox = "nordfox", -- change the colorscheme
+-- 	styles = {
+-- 		comments = "italic",
+-- 		functions = "bold",
+-- 	},
+-- })
+
+-- -- load the configurations
+-- nightfox.load()
+-- Default options
+require('nightfox').setup({
+  options = {
+    -- Compiled file's destination location
+    compile_path = vim.fn.stdpath("cache") .. "/nightfox",
+    compile_file_suffix = "_compiled", -- Compiled file suffix
+    transparent = false,    -- Disable setting background
+    terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
+    dim_inactive = false,   -- Non focused panes set to alternative background
+    styles = {              -- Style to be applied to different syntax groups
+      comments = "NONE",    -- Value is any valid attr-list value `:help attr-list`
+      conditionals = "NONE",
+      constants = "NONE",
+      functions = "NONE",
+      keywords = "NONE",
+      numbers = "NONE",
+      operators = "NONE",
+      strings = "NONE",
+      types = "NONE",
+      variables = "NONE",
+    },
+    inverse = {             -- Inverse highlight for different types
+      match_paren = false,
+      visual = false,
+      search = false,
+    },
+    modules = {             -- List of various plugins and additional options
+      -- ...
+    },
+  }
 })
 
--- load the configurations
-nightfox.load()
+-- setup must be called before loading
+vim.cmd("colorscheme nordfox")

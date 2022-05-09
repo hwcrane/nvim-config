@@ -5,6 +5,7 @@ return require("packer").startup(function()
 	use("EdenEast/nightfox.nvim")
 	use("NTBBloodbath/doom-one.nvim")
 	use("olimorris/onedarkpro.nvim")
+	use("navarasu/onedark.nvim")
 
 	-- File tree
 	use("kyazdani42/nvim-tree.lua")
@@ -49,15 +50,6 @@ return require("packer").startup(function()
 	-- Trouble
 	use("folke/trouble.nvim")
 
-	-- Folding
-	use({
-		"anuvyklack/pretty-fold.nvim",
-		config = function()
-			require("pretty-fold").setup({})
-			require("pretty-fold.preview").setup_keybinding()
-		end,
-	})
-
 	-- Terminal
 	use("akinsho/toggleterm.nvim")
 
@@ -68,4 +60,10 @@ return require("packer").startup(function()
 			"nvim-lua/plenary.nvim",
 		},
 	})
+
+	-- Indent Lines
+	use("lukas-reineke/indent-blankline.nvim")
+
+	-- Session Manger
+	use("Shatur/neovim-session-manager")
 end)
