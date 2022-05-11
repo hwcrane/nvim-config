@@ -19,6 +19,6 @@ set.relativenumber = true
 set.nu = true
 set.signcolumn = "yes"
 set.termguicolors = true
-set.splitbelow = true
+-- set.splitbelow = true
 set.wrap = false
 set.splitright = true

@@ -34,7 +34,6 @@ local on_attach = function(client, bufnr)
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
 	end
 end
-
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
@@ -62,3 +61,46 @@ for _, lsp in ipairs(servers) do
 		},
 	})
 end
+
+nvim_lsp.texlab.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	flags = {
+		debounce_text_changes = 150,
+	},
+	cmd = { "texlab" },
+	filetypes = { "plaintex", "tex", "bib" },
+	settings = {
+		texlab = {
+			auxDirectory = "./buildfiles",
+			bibtexFormatter = "texlab",
+			build = {
+				args = {
+					"-shell-escape",
+					"-synctex=1",
+					"-interaction=nonstopmode",
+					"-file-line-error",
+					"-lualatex",
+					"-outdir=output",
+					"%f",
+				},
+				executable = "latexmk",
+				forwardSearchAfter = false,
+				onSave = true,
+			},
+			chktex = {
+				onEdit = true,
+				onOpenAndSave = true,
+			},
+			diagnosticsDelay = 300,
+			formatterLineLength = 80,
+			forwardSearch = {
+				args = {},
+			},
+			latexFormatter = "latexindent",
+			latexindent = {
+				modifyLineBreaks = false,
+			},
+		},
+	},
+})

@@ -17,6 +17,7 @@ return require("packer").startup(function()
 	use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
 	use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
 	use("L3MON4D3/LuaSnip") -- Snippets plugin
+	use("rafamadriz/friendly-snippets")
 	use("onsails/lspkind-nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("tpope/vim-commentary")

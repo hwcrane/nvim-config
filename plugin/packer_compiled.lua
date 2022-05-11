@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/hwcrane/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
     url = "https://github.com/NTBBloodbath/doom-one.nvim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/hwcrane/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/hwcrane/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",

@@ -22,7 +22,7 @@ map("n", "<A-9>", ":BufferGoto 9<CR>", opts) -- Option + 9
 map("n", "<A-0>", ":BufferLast<CR>", opts) -- Option + 0
 
 -- Close buffer
--- map("n", "<A-C>", ":BufferClose<CR>", opts)
+map("n", "<C-C>", ":BufferClose<CR>", opts)
 -- Wipeout bu7fer
 --                 :BufferWipeout<CR>
 -- Close commands
@@ -65,3 +65,4 @@ map("n", "<leader>j", "<C-W><C-J>", opts)
 map("n", "<leader>k", "<C-W><C-K>", opts)
 map("n", "<leader>l", "<C-W><C-L>", opts)
 map("n", "<leader>h", "<C-W><C-H>", opts)
+map("n", "<leader>ss", "<C-W><C-V>", opts)
